@@ -12,7 +12,7 @@ import {
     TouchableOpacity,
     View
 } from "react-native";
-import {icons} from "../../constants";
+import {icons, SIZES} from "../../constants";
 import {SharedElement} from "react-navigation-shared-element";
 import {
     Oswald_200ExtraLight,
@@ -24,6 +24,8 @@ import {
     useFonts
 } from '@expo-google-fonts/oswald'
 import * as Animatable from 'react-native-animatable';
+import NotchResponsive from "../../components/NotchResponsive";
+import {FONTS} from "../../constants/theme";
 
 const {width, height} = Dimensions.get("window")
 
@@ -49,6 +51,8 @@ const LeagueDetails = ({navigation, route}) => {
         <LinearGradient
             colors={['#000', '#40114A', '#000']}>
             <SafeAreaView style={styles.container}>
+
+                <NotchResponsive/>
 
                 <LinearGradient
                     colors={['#000', 'transparent']}>
@@ -95,13 +99,12 @@ const LeagueDetails = ({navigation, route}) => {
                         to be sure there isn't anything embarrassing hidden in the middle of text. </Animatable.Text>
 
 
-                    <Animatable.View animation={"fadeInUp"} duration={500}  useNativeDriver={true}>
+                    <Animatable.View animation={"fadeInUp"} duration={500} useNativeDriver={true}>
 
-                    <TouchableOpacity style={styles.button}>
-                        <Text style={styles.dwn}>Download & Play</Text>
-                    </TouchableOpacity>
+                        <TouchableOpacity style={styles.button}>
+                            <Text style={styles.dwn}>Download & Play</Text>
+                        </TouchableOpacity>
                     </Animatable.View>
-
 
 
                 </LinearGradient>
@@ -124,10 +127,10 @@ const styles = StyleSheet.create({
         height: "100%",
         width: "100%",
 
-        paddingHorizontal: 40
+        // paddingHorizontal: 40
     },
     header: {
-        height: 320,
+        height: height * 0.4,
         width: width,
         // bottom:20
     },
@@ -146,11 +149,11 @@ const styles = StyleSheet.create({
 
     },
     lol: {
-        width: width * 0.6,
-        height: 120,
+        width: SIZES.font1 * 7,
+        height: SIZES.font1 * 3,
         alignSelf: "center",
         marginTop: 20,
-        marginBottom: 10
+        // marginBottom: 10
         // bottom: 80
 
     }, divider: {
@@ -166,22 +169,25 @@ const styles = StyleSheet.create({
         alignItems: "center"
     },
     txt: {
+        ...FONTS.body7,
         color: "#fff",
         marginVertical: 10,
-        fontSize: 22,
+
         fontFamily: "Oswald_400Regular",
     },
     txt2: {
         color: "#fff",
-        marginVertical: 10,
+        marginTop: 10,
         fontSize: 18,
         fontFamily: "Oswald_400Regular",
         marginLeft: 40
     },
     body: {
+        ...FONTS.body9,
+
         color: "#fff",
-        marginVertical: 10,
-        fontSize: 16,
+        // marginVertical: 10,
+        // fontSize: 16,
         fontFamily: "Oswald_300Light",
         marginHorizontal: 40
     },
@@ -193,7 +199,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         backgroundColor: "#A81F9E",
         alignSelf: "center",
-        marginTop: 30
+        marginTop: 20
     },
     dwn: {
         color: "#fff",

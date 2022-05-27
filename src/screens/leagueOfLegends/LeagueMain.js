@@ -26,6 +26,7 @@ import {
 } from '@expo-google-fonts/oswald'
 import {lolBackColors} from "../../constants/dummyData";
 import {SharedElement} from "react-navigation-shared-element";
+import NotchResponsive from "../../components/NotchResponsive";
 
 const {width, height} = Dimensions.get("window")
 
@@ -108,6 +109,8 @@ const LeagueMain = ({navigation}) => {
             colors={['#000', '#40114A', '#000']}>
 
             <SafeAreaView style={styles.container}>
+                <NotchResponsive/>
+
                 <Header/>
 
                 <View style={styles.profileBox}>
@@ -182,7 +185,7 @@ const styles = StyleSheet.create({
         height: "100%",
         width: "100%",
 
-        paddingHorizontal: 40
+        // paddingHorizontal: 40
     },
 
     background: {
@@ -192,7 +195,8 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         flexDirection: "row",
         alignItems: "center",
-        width: "45%", marginTop: 20
+        width: "45%",
+        marginTop: 20
 
     },
     profileImage: {
@@ -203,7 +207,7 @@ const styles = StyleSheet.create({
     profileText: {
         color: "white",
         fontFamily: "Oswald_400Regular",
-        letterSpacing: 0.9
+        letterSpacing: 0.6
 
     },
     backgroundRectangle: {
@@ -213,14 +217,14 @@ const styles = StyleSheet.create({
 
         // alignSelf: "center",
         // justifyContent: "center",
-        top: 100
+        top: height * 0.08
 
     },
     mainImage: {
         width: width * 0.8,
         height: "140%",
         alignSelf: "center",
-        bottom: 290
+        bottom: height * 0.3
 
     },
     dot: {

@@ -30,7 +30,7 @@ export default function App() {
 
                               sharedElements={(route, otherRoute, showing) => {
                                   // const {item} = route.params;
-                                  return [{id: route.params.item.id, animation: 'move', }];
+                                  return [{id: route.params.item.id, animation: 'move',}];
                                   // return [route.params.item.id,];
                               }}
 
@@ -48,8 +48,6 @@ export default function App() {
                                       }
                                   }
                               })}
-
-
                 />
                 <Stack.Screen name={"Details"} component={Details}
 
