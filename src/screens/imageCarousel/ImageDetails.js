@@ -145,6 +145,7 @@ const styles = StyleSheet.create({
         fontFamily: "Oswald_700Bold",
         color: COLORS.white,
         // marginTop: SIZES.font1,
+
         left: SIZES.font8,
         letterSpacing: 1.7
     },
