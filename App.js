@@ -30,11 +30,6 @@ export default function App() {
                 <Stack.Screen name={"ImageDetails"} component={ImageDetails}
 
 
-                              sharedElements={(route, otherRoute, showing) => {
-                                  // const {item} = route.params;
-                                  // return [{id: route.params.item.id, animation: 'fade-in',}];
-                                  return [route.params.item.id, `${route.params.item.id}.head`];
-                              }}
 
                               options={() => ({
                                   gestureEnabled: false,

@@ -1,6 +1,6 @@
 // @flow
-import React from 'react';
-import {FlatList, StyleSheet, Text, View} from "react-native";
+import React, {useRef} from 'react';
+import {Animated, StyleSheet, Text, View} from "react-native";
 import NotchResponsive from "../../components/NotchResponsive";
 import {carouselImages} from "../../constants/dummyData";
 import ImageCarouselItem from "../../components/ImageCarousel/ImageCarouselItem";
@@ -17,6 +17,7 @@ import {
 
 const ImageCarousel = ({navigation}) => {
 
+    const scrollX = useRef(new Animated.Value(0)).current;
 
 
     let [fontsLoaded] = useFonts({
@@ -41,14 +42,51 @@ const ImageCarousel = ({navigation}) => {
 
             </View>
 
-            <FlatList
+            <Animated.FlatList
                 data={carouselImages.reverse()}
                 horizontal
                 showsHorizontalScrollIndicator={false}
                 snapToAlignment={"center"}
                 decelerationRate={"fast"}
-                snapToInterval={SIZES.width -SIZES.font10*3.8}
-                renderItem={({item}) => <ImageCarouselItem item={item} onPress={()=>navigation.push("ImageDetails", {item})}/>}
+                snapToInterval={SIZES.width - SIZES.font10 * 3.8}
+                onScroll={Animated.event(
+                    [{nativeEvent: {contentOffset: {x: scrollX}}}], {useNativeDriver: true}
+                )}
+                renderItem={({item, index}) => {
+
+
+                    const inputRange = [
+                        (index - 1) * SIZES.width,
+                        index * SIZES.width,
+                        (index + 1) * SIZES.width
+                    ]
+
+                    const translateX = scrollX.interpolate({
+                        inputRange,
+                        outputRange: [ SIZES.width * 0.08, 0, - SIZES.width * 0.08],
+                        extrapolate: "clamp"
+                    })
+
+                    const scale = scrollX.interpolate({
+                        inputRange,
+                        outputRange: [1, 1.4, 1],
+                        extrapolate: "clamp"
+                    })
+
+
+                    return (
+                        <ImageCarouselItem item={item}
+                                           textStyle={{
+                                               transform: [{translateX}]
+                                           }}
+                                           imgStyles={{
+                                               transform: [{scale}]
+
+                                           }}
+                                           onPress={() => navigation.push("ImageDetails", {item})}/>
+                    )
+
+                }}
 
             />
 
@@ -65,7 +103,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: SIZES.font10,
         paddingVertical: SIZES.font7,
     },
-    header:{
-        height:SIZES.height*0.06
+    header: {
+        height: SIZES.height * 0.06
     }
 })
