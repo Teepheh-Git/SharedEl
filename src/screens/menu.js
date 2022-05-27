@@ -34,6 +34,9 @@ const Menu = ({navigation}) => {
             <Pressable style={styles.box} onPress={() => navigation.navigate("LeagueMain")}>
                 <Text style={styles.text}>League Of Legends</Text>
             </Pressable>
+            <Pressable style={styles.box} onPress={() => navigation.navigate("ImageCarousel")}>
+                <Text style={styles.text}>Image Carousel</Text>
+            </Pressable>
 
         </View>
     );

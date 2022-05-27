@@ -70,3 +70,50 @@ export const lolBackColors = [{
     id: "3",
     uri: icons.pink
 }]
+
+
+export const carouselImages = [
+    {
+        id: '1',
+        title: "POSITIVE BEVERAGE",
+        image: require("../../assets/images/img1.jpg"),
+        subtitle: 'series 1',
+        color: 'Red',
+    },
+    {
+        id: '2',
+        title: "COCA-COLA",
+        image: require("../../assets/images/img2.jpg"),
+        subtitle: 'series 2',
+        color: 'green',
+    },
+    {
+        id: '6',
+        title: "GUAYARKI ORGANIC",
+        image: require("../../assets/images/img6.jpg"),
+        subtitle: 'series 3',
+        color: 'blue',
+    },
+    {
+        id: '3',
+        title: "SUNDAY PALE-ALE",
+        image: require("../../assets/images/img3.jpg"),
+        subtitle: 'series 3',
+        color: 'blue',
+    },
+    {
+        id: '5',
+        title: "MONSTER ENERGY",
+        image: require("../../assets/images/img5.jpg"),
+        subtitle: 'series 3',
+        color: 'blue',
+    },
+
+    {
+        id: '7',
+        title: "TONIC WATER",
+        image: require("../../assets/images/img7.jpg"),
+        subtitle: 'series 3',
+        color: 'blue',
+    }
+];

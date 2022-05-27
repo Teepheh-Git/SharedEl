@@ -7,6 +7,8 @@ import Details from "./src/screens/firstTest/Details";
 import Menu from "./src/screens/menu";
 import LeagueMain from "./src/screens/leagueOfLegends/LeagueMain";
 import LeagueDetails from "./src/screens/leagueOfLegends/LeagueDetails";
+import ImageCarousel from "./src/screens/imageCarousel/ImageCarousel";
+import ImageDetails from "./src/screens/imageCarousel/ImageDetails";
 
 enableScreens()
 const Stack = createSharedElementStackNavigator();
@@ -24,6 +26,33 @@ export default function App() {
                     headerShown: true
                 }}/>
                 <Stack.Screen name={"Home"} component={Home}/>
+                <Stack.Screen name={"ImageCarousel"} component={ImageCarousel}/>
+                <Stack.Screen name={"ImageDetails"} component={ImageDetails}
+
+
+                              sharedElements={(route, otherRoute, showing) => {
+                                  // const {item} = route.params;
+                                  // return [{id: route.params.item.id, animation: 'fade-in',}];
+                                  return [route.params.item.id, `${route.params.item.id}.head`];
+                              }}
+
+                              options={() => ({
+                                  gestureEnabled: false,
+                                  transitionSpec: {
+                                      open: {animation: "timing", config: {duration: 500}},
+                                      close: {animation: "timing", config: {duration: 500}}
+                                  },
+                                  cardStyleInterpolator: ({current: {progress}}) => {
+                                      return {
+                                          cardStyle: {
+                                              opacity: progress
+                                          }
+                                      }
+                                  }
+                              })}/>
+
+
+                />
                 <Stack.Screen name={"LeagueMain"} component={LeagueMain}/>
                 <Stack.Screen name={"LeagueDetails"} component={LeagueDetails}
 
