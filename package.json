@@ -10,6 +10,8 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@expo-google-fonts/copse": "^0.2.2",
+    "@expo-google-fonts/courgette": "^0.2.2",
     "@expo-google-fonts/oswald": "^0.2.2",
     "@expo/vector-icons": "^13.0.0",
     "@react-navigation/native": "^6.0.10",

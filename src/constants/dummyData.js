@@ -117,3 +117,61 @@ export const carouselImages = [
         color: 'blue',
     }
 ];
+
+
+export const gadgetsImages = [
+    {
+        id: '1',
+        title: "IPHONE 11 PRO",
+        subtitle: 'The new iphone series  in store, get yours now',
+        image: require("../../assets/gadgetsImages/pic1.png"),
+        color: '#96975D99',
+        ticker: "APPLE"
+    },
+    {
+        id: '2',
+        title: "AMAZON SPEAKERS",
+        subtitle: 'The speakers specially mad for your exciting moments',
+        image: require("../../assets/gadgetsImages/pic2.png"),
+        color: 'pink',
+        ticker: "AMAZON"
+
+    },
+    {
+        id: '3',
+        title: "MACBOOK PRO",
+        subtitle: 'The best machine to get your work  done within good time',
+        image: require("../../assets/gadgetsImages/pic3.png"),
+        color: 'blue',
+        ticker: "APPLE LAPTOP"
+
+    },
+    {
+        id: '4',
+        title: "AIRPODS 2",
+        subtitle: 'Music delivered to you in the best possible way',
+        image: require("../../assets/gadgetsImages/pic4.png"),
+        color: 'turquoise',
+        ticker: "ORAIMO"
+
+    },
+    {
+        id: '5',
+        title: "BEATS HEADPHONES",
+        subtitle: 'Protected eardrums in conjunction with quality music.',
+        image: require("../../assets/gadgetsImages/pic5.png"),
+        color: 'purple',
+        ticker: "BEATS"
+
+    },
+
+    {
+        id: '6',
+        title: "G-MOUSE",
+        subtitle: 'Ease in with that drag and drop feature.',
+        image: require("../../assets/gadgetsImages/pic6.png"),
+        color: 'red',
+        ticker: "G-SHOCK"
+
+    }
+];

@@ -1062,6 +1062,16 @@
   dependencies:
     "@types/hammerjs" "^2.0.36"
 
+"@expo-google-fonts/copse@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/copse/-/copse-0.2.2.tgz#5753efec03cbbc4af1a266531349bc08c65e1977"
+  integrity sha512-xGR2b/6nlwCe+HAPZGOOi3NaLOCNm0K7Mx26HZwUryjIvFnZPQs4pmJ2M0Mv5/KumiPmGx2kFYZTlugx27cHow==
+
+"@expo-google-fonts/courgette@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/courgette/-/courgette-0.2.2.tgz#1625a88e29840c984dab8f1eb223992ec5bc32c6"
+  integrity sha512-U57VBRWYE3MYlIlPpyakN3fVzEbtLNSO6mjg9JBgBEzKpra8WaU5iDQnlyPPBjsvJJOCUmLpgjknh4UyJRZ32A==
+
 "@expo-google-fonts/oswald@^0.2.2":
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/oswald/-/oswald-0.2.2.tgz#bb3dcd41914f593cdb27a0531a6f312f9e5ea8ee"

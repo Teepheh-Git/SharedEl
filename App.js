@@ -9,6 +9,9 @@ import LeagueMain from "./src/screens/leagueOfLegends/LeagueMain";
 import LeagueDetails from "./src/screens/leagueOfLegends/LeagueDetails";
 import ImageCarousel from "./src/screens/imageCarousel/ImageCarousel";
 import ImageDetails from "./src/screens/imageCarousel/ImageDetails";
+import GadgetsHome from "./src/screens/gadgets/gadgetsHome";
+import GadgetsDetails from "./src/screens/gadgets/gadgetsDetails";
+import NotchResponsive from "./src/components/NotchResponsive";
 
 enableScreens()
 const Stack = createSharedElementStackNavigator();
@@ -18,6 +21,7 @@ export default function App() {
     return (
 
         <NavigationContainer>
+
             <Stack.Navigator screenOptions={{
                 headerShown: false,
             }}>
@@ -26,10 +30,10 @@ export default function App() {
                     headerShown: true
                 }}/>
                 <Stack.Screen name={"Home"} component={Home}/>
+                <Stack.Screen name={"GadgetsHome"} component={GadgetsHome}/>
+                <Stack.Screen name={"GadgetsDetails"} component={GadgetsDetails}/>
                 <Stack.Screen name={"ImageCarousel"} component={ImageCarousel}/>
                 <Stack.Screen name={"ImageDetails"} component={ImageDetails}
-
-
 
                               options={() => ({
                                   gestureEnabled: false,

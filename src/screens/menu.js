@@ -27,7 +27,6 @@ const Menu = ({navigation}) => {
     }
     return (
         <View style={styles.container}>
-
             <Pressable style={styles.box} onPress={() => navigation.navigate("Home")}>
                 <Text style={styles.text}>Tests</Text>
             </Pressable>
@@ -37,7 +36,9 @@ const Menu = ({navigation}) => {
             <Pressable style={styles.box} onPress={() => navigation.navigate("ImageCarousel")}>
                 <Text style={styles.text}>Image Carousel</Text>
             </Pressable>
-
+            <Pressable style={styles.box} onPress={() => navigation.navigate("GadgetsHome")}>
+                <Text style={styles.text}>Gadgets</Text>
+            </Pressable>
         </View>
     );
 };
