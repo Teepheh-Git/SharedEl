@@ -37,13 +37,12 @@ const ImageCarouselItem = ({item, textStyle, imgStyles, onPress}) => {
             <View style={[styles.box, {overflow: "hidden"}]}>
 
 
-            <SharedElement id={item.id}>
-                <Animated.Image resizeMode="cover" source={item.image}
-                                style={[styles.img, StyleSheet.absoluteFillObject ,{...imgStyles}]}/>
-            </SharedElement>
+                <SharedElement id={item.id}>
+                    <Animated.Image resizeMode="cover" source={item.image}
+                                    style={[styles.img, StyleSheet.absoluteFillObject, {...imgStyles}]}/>
+                </SharedElement>
 
             </View>
-
 
 
             <View style={styles.layer}>
@@ -87,7 +86,7 @@ const styles = StyleSheet.create({
 
     },
     title: {
-        position:"absolute",
+        position: "absolute",
         ...FONTS.h2,
         fontFamily: "Oswald_700Bold",
         color: COLORS.white,

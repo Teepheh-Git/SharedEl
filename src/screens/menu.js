@@ -10,6 +10,7 @@ import {
     Oswald_700Bold,
     useFonts
 } from '@expo-google-fonts/oswald'
+import Glassmorphism from "./Glassmorphism/Glassmorphism";
 
 const Menu = ({navigation}) => {
 
@@ -38,6 +39,9 @@ const Menu = ({navigation}) => {
             </Pressable>
             <Pressable style={styles.box} onPress={() => navigation.navigate("GadgetsHome")}>
                 <Text style={styles.text}>Gadgets</Text>
+            </Pressable>
+            <Pressable style={styles.box} onPress={() => navigation.navigate("Glassmorphism")}>
+                <Text style={styles.text}>Glassmorphism</Text>
             </Pressable>
         </View>
     );

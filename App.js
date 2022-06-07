@@ -12,6 +12,7 @@ import ImageDetails from "./src/screens/imageCarousel/ImageDetails";
 import GadgetsHome from "./src/screens/gadgets/gadgetsHome";
 import GadgetsDetails from "./src/screens/gadgets/gadgetsDetails";
 import NotchResponsive from "./src/components/NotchResponsive";
+import Glassmorphism from "./src/screens/Glassmorphism/Glassmorphism";
 
 enableScreens()
 const Stack = createSharedElementStackNavigator();
@@ -99,6 +100,9 @@ export default function App() {
                                       }
                                   }
                               })}/>
+
+                <Stack.Screen name={"Glassmorphism"} component={Glassmorphism}/>
+
 
             </Stack.Navigator>
 
